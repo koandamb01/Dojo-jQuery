@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover In/Out</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            margin: 10px;
+            text-align: center;
+        }
+        
+        div.container {
+            width: 550px;
+            height: 320px;
+            margin: auto;
+            text-align: center;
+        }
+        
+        div.container img {
+            width: 130px;
+            height: 150px;
+            border: 1px solid grey;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Hover In/Out</h1>
+    <div class="container">
+        <img src="img/adventure-cat.png" data-alt-src="img/aidorucat.png">
+        <img src="img/catandninja.png" data-alt-src="img/chellocat.jpg">
+        <img src="img/cherry.jpg" data-alt-src="img/coder2.jpg">
+        <img src="img/codercat.jpg" data-alt-src="img/cooler.png">
+
+        <img src="img/daftpunk.gif" data-alt-src="img/defunktocat.png">
+        <img src="img/dojocat.jpg" data-alt-src="img/domo-cat.png">
+        <img src="img/github.jpg" data-alt-src="img/heisencat.png">
+        <img src="img/ironcat.png" data-alt-src="img/mario.png">
+    </div>
+
+    <script>
+        $('img').hover(function() {
+                let altSrc = $(this).attr('data-alt-src');
+                let oldSrc = $(this).attr('src');
+                $(this).attr('src', altSrc);
+                $(this).attr('data-alt-src', oldSrc);
+            },
+            function() {
+                let altSrc = $(this).attr('data-alt-src');
+                let oldSrc = $(this).attr('src');
+                $(this).attr('src', altSrc);
+                $(this).attr('data-alt-src', oldSrc);
+            });
+    </script>
+</body>
+
+</html>

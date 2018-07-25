@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: 1px solid red; */
+}
+
+.container {
+    width: 900px;
+    min-height: 1000px;
+    margin: auto;
+    background-color: rgb(175, 175, 175);
+}
+
+#title {
+    text-align: center;
+    padding: 20px;
+    background-color: #009EC1;
+    color: white;
+}
+
+#question {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(56, 98, 153);
+}
+
+.yes,
+.no {
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(240, 170, 64);
+    color: white;
+}
+
+.image {
+    width: 600px;
+    height: 225px;
+    margin: 20px auto;
+    background: url('Codingdojo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+#wrapper {
+    width: 860px;
+    height: 100%;
+    margin: auto;
+    border: 5px solid #009EC1;
+    color: ora
+}
+
+#wrapper div {
+    display: inline-block;
+    vertical-align: top;
+    width: 420px;
+    height: 100px;
+    margin: 4px;
+    margin-bottom: 20px;
+    background-color: rgb(142, 208, 230);
+    border-radius: 10px;
+}
+
+#wrapper h1 {
+    color: white;
+    margin: 5px;
+    text-align: center;
+}
+
+#wrapper button {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(240, 170, 64);
+    box-shadow: 1px 1px grey;
+    color: white;
+}
+
+#wrapper p {
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+footer {
+    text-align: center;
+    margin: 20px;
+    display: none;
+}
+
+span {
+    color: #009EC1;
+}
+
+p.yellow {
+    color: yellow;
+}

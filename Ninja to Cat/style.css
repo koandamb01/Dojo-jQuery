@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+}
+
+div.image {
+    width: 181px;
+    height: 271px;
+    margin: auto;
+    background-color: rgb(184, 180, 180);
+}

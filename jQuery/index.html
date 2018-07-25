@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">
+            jQuery Basics Functionality
+        </h1>
+
+        <p id="question">Do you want to know what jQuery can do?
+            <button class="yes">yes</button>
+            <button class="no">No</button>
+        </p>
+
+        <div class="image"></div>
+
+        <div id="wrapper">
+            <div class="f-hide">
+                <h1>hide()</h1>
+                <button>Hide Paraph</button>
+                <p>Click to hide this paragraph text.</p>
+            </div>
+
+            <div class="f-show">
+                <h1>show()</h1>
+                <button>Show Paraph</button>
+                <p>Click to show the paragraph hide before.</p>
+            </div>
+
+            <div class="f-click">
+                <h1>click()</h1>
+                <button>bg color</button>
+                <p>Click to change body background color orangered.</p>
+            </div>
+
+            <div class="f-slideToggle">
+                <h1>slideToggle()</h1>
+                <button>Toggle Title</button>
+                <p>Click to slide hide or slide show the page title.</p>
+            </div>
+
+            <div class="f-slideDown">
+                <h1>slideDown()</h1>
+                <button>Slide Down Image</button>
+                <p>Click to show image sliding down.</p>
+            </div>
+
+            <div class="f-slideUp">
+                <h1>slideUp()</h1>
+                <button>Slide Up Image</button>
+                <p>Click to hide image sliding down.</p>
+            </div>
+
+            <div class="f-fadeIn">
+                <h1>fadeIn()</h1>
+                <button>Fade In footer</button>
+                <p>Click to show page footer fading In.</p>
+            </div>
+
+            <div class="f-fadeOut">
+                <h1>fadeOut()</h1>
+                <button>Fade Out footer</button>
+                <p>Click to hide Dojo image fading Out.</p>
+            </div>
+
+            <div class="f-addclass">
+                <h1>addClass()</h1>
+                <button>Add Class</button>
+                <p>Click to add class 'yellow' to this paragraph.</p>
+            </div>
+
+            <div class="f-before">
+                <h1>before()</h1>
+                <button>Add ojo</button>
+                <p>Click to add <span>Coding Dojo </span>before the question.</p>
+            </div>
+
+            <div class="f-append">
+                <h1>append()</h1>
+                <button>Append a box</button>
+                <p>Click to add empty box to this container.</p>
+            </div>
+
+            <div class="f-html">
+                <h1>html()</h1>
+                <button>Get or Set html</button>
+                <p>To get this box html content and display here.</p>
+            </div>
+        </div>
+        <footer>Made by Mohamed Koanda &copy; Inspired by <span>Coding Dojo</span></footer>
+    </div>
+
+
+    <script>
+        // jQuery for the question
+        $('.yes').click(function() {
+            $('#question').text("Awsome Choice!");
+        });
+
+        $('.no').click(function() {
+            $('#question').text("Ohh no come! don't you want to learn jQuery?");
+        });
+
+        // to hide paragraph
+        $('.f-hide button').click(function() {
+            $('.f-hide p').hide();
+        });
+
+        // To show paragraph
+        $('.f-show button').click(function() {
+            $('.f-hide p').show();
+        })
+
+        // change background color of the container
+        $('.f-click button').click(function() {
+            $('.container').css('background-color', 'orangered');
+        })
+
+        // toggle the page title
+        $('.f-slideToggle button').click(function() {
+            $('#title').slideToggle('slow');
+        });
+
+        // slidedown to show the image
+        $('.f-slideDown button').click(function() {
+            $('.image').slideDown();
+        });
+
+        // slidedown to hide the image
+        $('.f-slideUp button').click(function() {
+            $('.image').slideUp();
+        });
+
+        // fade in the footer of the page
+        $('.f-fadeIn button').click(function() {
+            $('footer').fadeIn('slow');
+        });
+
+        // fade in the footer of the page
+        $('.f-fadeOut button').click(function() {
+            $('footer').fadeOut('slow');
+        });
+
+        // add class yellow to the p tag
+        $('.f-addclass button').click(function() {
+            $('.f-addclass p').addClass('yellow');
+        });
+
+        // before()
+        $('.f-before button').click(function() {
+            $('#question').before('<p style="text-align: center;">Coding Dojo</p>');
+        });
+
+        // append()
+        $('.f-append button').click(function() {
+            $('#wrapper').append('<div></div>');
+        });
+
+
+        // html()
+        $('.f-html button').click(function() {
+            var htmlString = $('.f-html').html();
+            // console.log(htmlString);
+            $('.f-html').text(htmlString);
+        })
+
+
+
+        // $('p').css('background-color', 'red');
+        //console.log('Clicked!!!');
+    </script>
+</body>
+
+</html>
